@@ -264,9 +264,9 @@ app.use((req, res, next) => {
 // --------------------
 
 // root route
-// app.get("/", (req, res) => {
-//   res.redirect("/listings");
-// });
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 
 // Demo user route (optional - for testing)
 app.get("/demoUser", async (req, res) => {
