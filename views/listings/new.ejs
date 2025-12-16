@@ -1,0 +1,80 @@
+<% layout("/layouts/boilerPlate.ejs")-%>
+
+<div class="row mb-3">
+  <div class="col-8 offset-2">
+    <br />
+    <h2>Add listing</h2>
+    <form method="POST" action="/listings" enctype="multipart/form-data">
+      <div class="mt-2 mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          placeholder="Enter Title"
+          class="form-control"
+          name="listing[title]"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          placeholder="description"
+          name="listing[description]"
+          id=""
+          required
+        ></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input
+          class="form-control"
+          name="listing[image][url]"
+          placeholder="image-URL"
+          type="file"
+          required
+        />
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input
+              class="form-control"
+              name="listing[price]"
+              placeholder="price"
+              type="text"
+              required
+            />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input
+              class="form-control"
+              name="listing[location]"
+              placeholder="location"
+              type="text"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input
+          class="form-control"
+          name="listing[country]"
+          placeholder="country"
+          type="text"
+          required
+        />
+      </div>
+      <button class="btn btn-dark add-btn">ADD</button>
+      <br /><br />
+    </form>
+  </div>
+</div>
