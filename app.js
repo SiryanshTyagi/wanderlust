@@ -265,7 +265,7 @@ app.use((req, res, next) => {
 
 // root route
 app.get("/", (req, res) => {
-  res.send("root route...");
+  res.redirect("/listings");
 });
 
 // Demo user route (optional - for testing)
